@@ -4,8 +4,10 @@ using ProEventos.Domain;
 namespace ProEventos.Persistence.Contextos
 {
     public class ProEventosContext : DbContext
+    // To use DbContext in our application, we need to create a class that derive from it.
     {
 
+        // a context class typically includes DbSet<Entity> for each entity in the model.
         public ProEventosContext(DbContextOptions<ProEventosContext> options) 
             : base(options){}
         public DbSet<Evento> Eventos { get; set; }

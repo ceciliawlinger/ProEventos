@@ -9,8 +9,11 @@ namespace ProEventos.Persistence
 {
     public class EventoPersist : IEventoPersist
     {
-        private readonly ProEventosContext _context;
-        public EventoPersist(ProEventosContext context)
+        private readonly ProEventosContext _context; 
+        // an instance of DbContext represents a session with the database which can be used to query and save instances of the entities to the database.
+        // it's a combinantion of the Unit Of Work and Repository patterns.
+
+        public EventoPersist(ProEventosContext context) //construtor da classe.
         {
             _context = context;
             //_context.ChangeTracker.QueryTrackingBehavior = QueryTrackingBehavior.NoTracking;
